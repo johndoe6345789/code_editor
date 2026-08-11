@@ -29,9 +29,5 @@ jobs:
           path: ~/.npm
           key: npm-${{ runner.os }}-${{ hashFiles('**/package.json') }}
           restore-keys: npm-${{ runner.os }}-
-      - name: Install (code_editor)
-        working-directory: code_editor
-        run: npm install
-      - name: Install (nerd_mode_ide)
-        working-directory: nerd_mode_ide
-        run: npm install
+      - name: No runnable npm scripts
+        run: echo "This repo declares no lint/build/typecheck scripts."
